@@ -170,7 +170,7 @@ $('#send').addEventListener('click', async () => {
     p: type.dataset.p
   });
   // L'icona di ntfy richiede un URL pubblico (non un'immagine incorporata)
-  if (LOGO_URL) p.set('i', LOGO_URL);
+  if (LOGO_URL) p.set('icon', LOGO_URL);
   if (photoBlob) p.set('f', 'foto-' + Date.now() + '.jpg');
 
   $('#send').disabled = true; setStatus('Invio in corso…');
